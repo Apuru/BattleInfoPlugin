@@ -43,15 +43,15 @@ namespace BattleInfoPlugin.Models
 
         public Type2 Type2 { get; set; }
 
-        public string ToolTip => (this.Firepower != 0 ? "火力:" + this.Firepower : "")
-                                 + (this.Torpedo != 0 ? " 雷装:" + this.Torpedo : "")
-                                 + (this.AA != 0 ? " 対空:" + this.AA : "")
-                                 + (this.Armer != 0 ? " 装甲:" + this.Armer : "")
-                                 + (this.Bomb != 0 ? " 爆装:" + this.Bomb : "")
-                                 + (this.ASW != 0 ? " 対潜:" + this.ASW : "")
-                                 + (this.Hit != 0 ? " 命中:" + this.Hit : "")
-                                 + (this.Evade != 0 ? " 回避:" + this.Evade : "")
-                                 + (this.LOS != 0 ? " 索敵:" + this.LOS : "");
+        public string ToolTip => (this.Firepower != 0 ? " Firepower:" + this.Firepower : "")
+                                 + (this.Torpedo != 0 ? " Torpedo:" + this.Torpedo : "")
+                                 + (this.AA != 0 ? " AA:" + this.AA : "")
+                                 + (this.Armer != 0 ? " Armour:" + this.Armer : "")
+                                 + (this.Bomb != 0 ? " Bomb:" + this.Bomb : "")
+                                 + (this.ASW != 0 ? " ASW:" + this.ASW : "")
+                                 + (this.Hit != 0 ? " Accuracy:" + this.Hit : "")
+                                 + (this.Evade != 0 ? " Evasion:" + this.Evade : "")
+                                 + (this.LOS != 0 ? " LOS:" + this.LOS : "");
 
         public ShipSlotData(SlotItemInfo item, int maximum = -1, int current = -1)
         {

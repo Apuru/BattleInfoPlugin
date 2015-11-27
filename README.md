@@ -1,3 +1,8 @@
+# Info
+
+This is a hastily translated, English version of the Battleinfo plugin which predicts battles for you. Only works for KCV 4.X (so Yuubari's version). Its really addictive to look into the future! 
+
+
 # BattleInfoPlugin
 
 戦闘情報を表示する KanColleViewer プラグインです。

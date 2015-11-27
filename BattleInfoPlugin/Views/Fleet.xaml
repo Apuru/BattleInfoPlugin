@@ -145,7 +145,7 @@
                                 <StackPanel Orientation="Horizontal">
                                     <StackPanel>
                                         <TextBlock>
-                                            <Run Text="火力"/>
+                                            <Run Text="Firepower"/>
                                             <Run Text="{Binding SumFirepower, Mode=OneWay, Converter={StaticResource UnknownValueConverter}}"
                                                  Style="{DynamicResource EmphaticTextElementStyleKey}"
                                                  FontSize="12"/>
@@ -161,7 +161,7 @@
                                         </TextBlock>
 
                                         <TextBlock>
-                                            <Run Text="雷装"/>
+                                            <Run Text="Torpedo"/>
                                             <Run Text="{Binding SumTorpedo, Mode=OneWay, Converter={StaticResource UnknownValueConverter}}"
                                                  Style="{DynamicResource EmphaticTextElementStyleKey}"
                                                  FontSize="12"/>
@@ -177,7 +177,7 @@
                                         </TextBlock>
 
                                         <TextBlock>
-                                            <Run Text="対空"/>
+                                            <Run Text="AA"/>
                                             <Run Text="{Binding SumAA, Mode=OneWay, Converter={StaticResource UnknownValueConverter}}"
                                                  Style="{DynamicResource EmphaticTextElementStyleKey}"
                                                  FontSize="12"/>
@@ -193,7 +193,7 @@
                                         </TextBlock>
 
                                         <TextBlock>
-                                            <Run Text="装甲"/>
+                                            <Run Text="Armour"/>
                                             <Run Text="{Binding SumArmer, Mode=OneWay, Converter={StaticResource UnknownValueConverter}}"
                                                  Style="{DynamicResource EmphaticTextElementStyleKey}"
                                                  FontSize="12"/>
@@ -211,30 +211,30 @@
 
                                     <StackPanel>
                                         <TextBlock>
-                                            <Run Text="対潜"/>
+                                            <Run Text="ASW"/>
                                             <Run Text="{Binding SlotsASW, Mode=OneWay, StringFormat={}(+{0})}"/>
                                         </TextBlock>
                                         <TextBlock>
-                                            <Run Text="命中"/>
+                                            <Run Text="Accuracy"/>
                                             <Run Text="{Binding SlotsHit, Mode=OneWay, StringFormat={}(+{0})}"/>
                                         </TextBlock>
                                         <TextBlock>
-                                            <Run Text="回避"/>
+                                            <Run Text="Evasion"/>
                                             <Run Text="{Binding SlotsEvade, Mode=OneWay, StringFormat={}(+{0})}"/>
                                         </TextBlock>
                                     </StackPanel>
                                 </StackPanel>
 
                                 <StackPanel>
-                                    <TextBlock Text="攻撃種別"/>
+                                    <TextBlock Text="Attack Type"/>
                                     <TextBlock>
-                                        <Run Text="昼戦"/>
+                                        <Run Text="Day Battle"/>
                                         <Run Text="{Binding DayAttackType, Mode=OneWay, Converter={StaticResource AttackTypeConverter}}"
                                              Style="{DynamicResource EmphaticTextElementStyleKey}"
                                              FontSize="{DynamicResource DefaultFontSizeKey}"/>
                                     </TextBlock>
                                     <TextBlock>
-                                        <Run Text="夜戦"/>
+                                        <Run Text="Night Battle"/>
                                         <Run Text="{Binding NightAttackType, Mode=OneWay, Converter={StaticResource AttackTypeConverter}}"
                                              Style="{DynamicResource EmphaticTextElementStyleKey}"
                                              FontSize="{DynamicResource DefaultFontSizeKey}"/>
@@ -339,7 +339,7 @@
                                   Margin="3,2,3,0">
                                 <Border Background="{DynamicResource FleetRepairingBrushKey}"
                                         Opacity=".4" />
-                                <TextBlock Text="退避済"
+                                <TextBlock Text="Saved"
                                            Style="{DynamicResource EmphaticTextStyleKey}"
                                            HorizontalAlignment="Center" />
                             </Grid>
@@ -350,7 +350,7 @@
                                   Margin="3,2,3,0">
                                 <Border Background="{DynamicResource FleetRepairingBrushKey}"
                                         Opacity=".4" />
-                                <TextBlock Text="退避済"
+                                <TextBlock Text="Towing"
                                            Style="{DynamicResource EmphaticTextStyleKey}"
                                            HorizontalAlignment="Center" />
                             </Grid>

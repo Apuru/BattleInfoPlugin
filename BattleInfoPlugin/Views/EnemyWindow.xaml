@@ -14,7 +14,7 @@
                    xmlns:enemies="clr-namespace:BattleInfoPlugin.ViewModels.Enemies"
                    xmlns:behaviors="clr-namespace:BattleInfoPlugin.Views.Behaviors"
                    mc:Ignorable="d" 
-                   Title="既知の敵一覧"
+                   Title="Known Enemy List"
                    Width="1000"
                    Height="900"
                    FontSize="12"
@@ -89,7 +89,7 @@
                                   BandVisibility="Collapsed" />
 
                 <TextBlock Grid.Column="1"
-                           Text="既知の敵一覧"
+                           Text="Known Enemy List"
                            Style="{DynamicResource CaptionTextStyleKey}"
                            Margin="2,0,8,0" />
 
@@ -191,32 +191,32 @@
                             </Style>
                         </StackPanel.Resources>
                         <TextBlock>
-                            <Run Text="エリア "/>
+                            <Run Text="Area "/>
                             <Run Text="{Binding /Info.MapArea.Name, Mode=OneTime}"
                                  Style="{DynamicResource EmphaticTextElementStyleKey}"/>
                         </TextBlock>
                         <TextBlock>
-                            <Run Text="マップ "/>
+                            <Run Text="Map "/>
                             <Run Text="{Binding /Name, Mode=OneTime}"
                                  Style="{DynamicResource EmphaticTextElementStyleKey}"/>
                         </TextBlock>
                         <TextBlock>
-                            <Run Text="難易度 Lv."/>
+                            <Run Text="Difficulty Lv."/>
                             <Run Text="{Binding /Info.Level, Mode=OneTime}"
                                  Style="{DynamicResource EmphaticTextElementStyleKey}"/>
                         </TextBlock>
                         <TextBlock>
-                            <Run Text="必要撃破回数 "/>
+                            <Run Text="Kills needed "/>
                             <Run Text="{Binding /RequiredDefeatCount, Mode=OneTime}"
                                  Style="{DynamicResource EmphaticTextElementStyleKey}"/>
                         </TextBlock>
                         
-                        <TextBlock Text="作戦名"
+                        <TextBlock Text="Operation Name"
                                    Margin="5,30,5,0"/>
                         <TextBlock Text="{Binding /Info.OperationName, Mode=OneTime}"
                                    Style="{DynamicResource EmphaticTextStyleKey}"
                                    Margin="5,5,5,0"/>
-                        <TextBlock Text="作戦概要"/>
+                        <TextBlock Text="Strategy Overview"/>
                         <TextBlock Text="{Binding /Info.OperationSummary, Mode=OneTime, Converter={StaticResource BrTagToNewLineConverter}}"
                                    Style="{DynamicResource EmphaticTextStyleKey}"
                                    Margin="5,5,5,0"
@@ -434,7 +434,7 @@
                                                           Background="Transparent">
                                                         <Grid.ContextMenu>
                                                             <ContextMenu DataContext="{Binding RelativeSource={RelativeSource Self}, Path=PlacementTarget.Tag}">
-                                                                <MenuItem Header="Enemy ID をコピー">
+                                                                <MenuItem Header="Enemy ID Copy">
                                                                     <i:Interaction.Triggers>
                                                                         <i:EventTrigger EventName="Click">
                                                                             <l:LivetCallMethodAction MethodTarget="{Binding}"
@@ -442,7 +442,7 @@
                                                                         </i:EventTrigger>
                                                                     </i:Interaction.Triggers>
                                                                 </MenuItem>
-                                                                <MenuItem Header="削除">
+                                                                <MenuItem Header="Delete">
                                                                     <i:Interaction.Triggers>
                                                                         <i:EventTrigger EventName="Click">
                                                                             <l:LivetCallMethodAction MethodTarget="{Binding}"
@@ -515,7 +515,7 @@
                                                                         </Style.Triggers>
                                                                     </Style>
                                                                 </Border.Style>
-                                                                <TextBlock Text="航空戦"
+                                                                <TextBlock Text="Air Battle"
                                                                            Margin="9,2"
                                                                            HorizontalAlignment="Center"/>
                                                             </Border>
@@ -536,13 +536,13 @@
                                                                         </Style.Triggers>
                                                                     </Style>
                                                                 </Border.Style>
-                                                                <TextBlock Text="夜戦"
+                                                                <TextBlock Text="Night Battle"
                                                                            Margin="9,2"
                                                                            HorizontalAlignment="Center"/>
                                                             </Border>
 
                                                             <TextBlock Margin="5,10,5,0">
-                                                                <Run Text="陣形:"
+                                                                <Run Text="Formation:"
                                                                      FontSize="12"/>
                                                                 <Run Text="{Binding Fleet.Formation, Mode=OneTime}"
                                                                      Style="{DynamicResource EmphaticTextElementStyleKey}"
@@ -647,7 +647,7 @@
 
                                     <TextBlock Grid.Column="3"
                                                Grid.Row="0"
-                                               Text="火力"/>
+                                               Text="Firepower"/>
                                     <TextBlock Grid.Column="3"
                                                Grid.Row="1">
                                         <Run Text="{Binding SumFirepower, Mode=OneTime, Converter={StaticResource UnknownValueConverter}}"
@@ -665,7 +665,7 @@
 
                                     <TextBlock Grid.Column="4"
                                                Grid.Row="0"
-                                               Text="雷装"/>
+                                               Text="Torpedo"/>
                                     <TextBlock Grid.Column="4"
                                                Grid.Row="1">
                                         <Run Text="{Binding SumTorpedo, Mode=OneTime, Converter={StaticResource UnknownValueConverter}}"
@@ -683,7 +683,7 @@
 
                                     <TextBlock Grid.Column="5"
                                                Grid.Row="0"
-                                               Text="対空"/>
+                                               Text="Anti-Air"/>
                                     <TextBlock Grid.Column="5"
                                                Grid.Row="1">
                                         <Run Text="{Binding SumAA, Mode=OneTime, Converter={StaticResource UnknownValueConverter}}"
@@ -701,7 +701,7 @@
 
                                     <TextBlock Grid.Column="6"
                                                Grid.Row="0"
-                                               Text="装甲"/>
+                                               Text="Armour"/>
                                     <TextBlock Grid.Column="6"
                                                Grid.Row="1">
                                         <Run Text="{Binding SumArmer, Mode=OneTime, Converter={StaticResource UnknownValueConverter}}"
@@ -719,7 +719,7 @@
 
                                     <TextBlock Grid.Column="7"
                                                Grid.Row="0"
-                                               Text="対潜"/>
+                                               Text="ASW"/>
                                     <TextBlock Grid.Column="7"
                                                Grid.Row="1"
                                                Text="{Binding SlotsASW, Mode=OneTime, StringFormat={}(+{0})}"/>
@@ -727,7 +727,7 @@
 
                                     <TextBlock Grid.Column="8"
                                                Grid.Row="0"
-                                               Text="命中"/>
+                                               Text="Accuracy"/>
                                     <TextBlock Grid.Column="8"
                                                Grid.Row="1"
                                                Text="{Binding SlotsHit, Mode=OneTime, StringFormat={}(+{0})}"/>
@@ -735,7 +735,7 @@
 
                                     <TextBlock Grid.Column="9"
                                                Grid.Row="0"
-                                               Text="回避"/>
+                                               Text="Evasion"/>
                                     <TextBlock Grid.Column="9"
                                                Grid.Row="1"
                                                Text="{Binding SlotsEvade, Mode=OneTime, StringFormat={}(+{0})}"/>
@@ -743,18 +743,18 @@
 
                                     <TextBlock Grid.Column="10"
                                                Grid.Row="0"
-                                               Text="攻撃種別"/>
+                                               Text="Attack Type"/>
                                     <StackPanel Grid.Column="10"
                                                 Grid.Row="1"
                                                 Grid.RowSpan="2">
                                         <TextBlock>
-                                            <Run Text="昼戦"/>
+                                            <Run Text="Day Battle"/>
                                             <Run Text="{Binding DayAttackType, Mode=OneTime, Converter={StaticResource AttackTypeConverter}}"
                                                  Style="{DynamicResource EmphaticTextElementStyleKey}"
                                                  FontSize="{DynamicResource DefaultFontSizeKey}"/>
                                         </TextBlock>
                                         <TextBlock>
-                                            <Run Text="夜戦"/>
+                                            <Run Text="Night Battle"/>
                                             <Run Text="{Binding NightAttackType, Mode=OneTime, Converter={StaticResource AttackTypeConverter}}"
                                                  Style="{DynamicResource EmphaticTextElementStyleKey}"
                                                  FontSize="{DynamicResource DefaultFontSizeKey}"/>

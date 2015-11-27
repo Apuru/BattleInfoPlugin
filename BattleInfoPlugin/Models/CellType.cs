@@ -9,18 +9,18 @@ namespace BattleInfoPlugin.Models
     {
         None = 0,
 
-        開始 = 1 << 0,
-        イベント無し = 1 << 1,
-        補給 = 1 << 2,
-        渦潮 = 1 << 3,
-        戦闘 = 1 << 4,
-        ボス = 1 << 5,
+        Start = 1 << 0,
+        No_Event = 1 << 1,
+        Supply = 1 << 2,
+        Whirlpool = 1 << 3,
+        Combat = 1 << 4,
+        Boss = 1 << 5,
         気のせい = 1 << 6,  //Frameでは気のせい変更前(赤)
-        航空戦 = 1 << 7,
-        母港 = 1 << 8,
-        航空偵察 = 1 << 9,
+        Air_Battle = 1 << 7,
+        HomePort = 1 << 8,
+        Air_Recon = 1 << 9,
 
-        夜戦 = 1 << 31,
+        Night_Battle = 1 << 31,
     }
 
     public static class CellTypeExtensions
@@ -32,8 +32,8 @@ namespace BattleInfoPlugin.Models
 
         public static CellType ToCellType(this string battleType)
         {
-            return battleType.Contains("sp_midnight") ? CellType.夜戦
-                : battleType.Contains("airbattle") ? CellType.航空戦
+            return battleType.Contains("sp_midnight") ? CellType.Night_Battle
+                : battleType.Contains("airbattle") ? CellType.Air_Battle
                 : CellType.None;
         }
 

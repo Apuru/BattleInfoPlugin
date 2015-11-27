@@ -309,23 +309,23 @@ namespace BattleInfoPlugin.Models
         public LimitedValue HP => new LimitedValue(this.NowHP, this.MaxHP, 0);
 
         public AttackType DayAttackType
-            => this.HasScout() && this.Count(Type2.主砲) == 2 && this.Count(Type2.徹甲弾) == 1 ? AttackType.カットイン主主
-            : this.HasScout() && this.Count(Type2.主砲) == 1 && this.Count(Type2.副砲) == 1 && this.Count(Type2.徹甲弾) == 1 ? AttackType.カットイン主徹
-            : this.HasScout() && this.Count(Type2.主砲) == 1 && this.Count(Type2.副砲) == 1 && this.Count(Type2.電探) == 1 ? AttackType.カットイン主電
-            : this.HasScout() && this.Count(Type2.主砲) >= 1 && this.Count(Type2.副砲) >= 1 ? AttackType.カットイン主副
-            : this.HasScout() && this.Count(Type2.主砲) >= 2 ? AttackType.連撃
-            : AttackType.通常;
+            => this.HasScout() && this.Count(Type2.MainGun) == 2 && this.Count(Type2.APAmmo) == 1 ? AttackType.Cut_inMainMain
+            : this.HasScout() && this.Count(Type2.MainGun) == 1 && this.Count(Type2.AuxGun) == 1 && this.Count(Type2.APAmmo) == 1 ? AttackType.Cut_inMainMainTorp
+            : this.HasScout() && this.Count(Type2.MainGun) == 1 && this.Count(Type2.AuxGun) == 1 && this.Count(Type2.Radar) == 1 ? AttackType.Cut_inMainRadar
+            : this.HasScout() && this.Count(Type2.MainGun) >= 1 && this.Count(Type2.AuxGun) >= 1 ? AttackType.Cut_inMainAux
+            : this.HasScout() && this.Count(Type2.MainGun) >= 2 ? AttackType.DoubleAttack
+            : AttackType.Normal;
 
         public AttackType NightAttackType
-            => this.Count(Type2.魚雷) >= 2 ? AttackType.カットイン雷
-            : this.Count(Type2.主砲) >= 3 ? AttackType.カットイン主主主
-            : this.Count(Type2.主砲) == 2 && this.Count(Type2.副砲) >= 1 ? AttackType.カットイン主主副
-            : this.Count(Type2.主砲) == 2 && this.Count(Type2.副砲) == 0 && this.Count(Type2.魚雷) == 1 ? AttackType.カットイン主雷
-            : this.Count(Type2.主砲) == 1 && this.Count(Type2.魚雷) == 1 ? AttackType.カットイン主雷
-            : this.Count(Type2.主砲) == 2 && this.Count(Type2.副砲) == 0 && this.Count(Type2.魚雷) == 0 ? AttackType.連撃
-            : this.Count(Type2.主砲) == 1 && this.Count(Type2.副砲) >= 1 && this.Count(Type2.魚雷) == 0 ? AttackType.連撃
-            : this.Count(Type2.主砲) == 0 && this.Count(Type2.副砲) >= 2 && this.Count(Type2.魚雷) <= 1 ? AttackType.連撃
-            : AttackType.通常;
+            => this.Count(Type2.Torpedo) >= 2 ? AttackType.Cut_inTorp
+            : this.Count(Type2.MainGun) >= 3 ? AttackType.Cut_inMainMainMain
+            : this.Count(Type2.MainGun) == 2 && this.Count(Type2.AuxGun) >= 1 ? AttackType.Cut_inMainMainAux
+            : this.Count(Type2.MainGun) == 2 && this.Count(Type2.AuxGun) == 0 && this.Count(Type2.Torpedo) == 1 ? AttackType.Cut_inMainMainTorp
+            : this.Count(Type2.MainGun) == 1 && this.Count(Type2.Torpedo) == 1 ? AttackType.Cut_inMainTorp
+            : this.Count(Type2.MainGun) == 2 && this.Count(Type2.AuxGun) == 0 && this.Count(Type2.Torpedo) == 0 ? AttackType.DoubleAttack
+            : this.Count(Type2.MainGun) == 1 && this.Count(Type2.AuxGun) >= 1 && this.Count(Type2.Torpedo) == 0 ? AttackType.DoubleAttack
+            : this.Count(Type2.MainGun) == 0 && this.Count(Type2.AuxGun) >= 2 && this.Count(Type2.Torpedo) <= 1 ? AttackType.DoubleAttack
+            : AttackType.Normal;
 
         public ShipData()
         {

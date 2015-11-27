@@ -44,7 +44,7 @@
             </Grid.RowDefinitions>
             
             <DockPanel Grid.Row="0">
-                <TextBlock Text="戦闘情報"
+                <TextBlock Text="Combat Info"
                            VerticalAlignment="Top"
                            Style="{DynamicResource HeaderTextStyleKey}"
                            Margin="0,0,10,0"/>
@@ -60,19 +60,19 @@
                         <StackPanel Grid.Column="1"
                                     Margin="0,0,10,0">
                             <TextBlock Style="{DynamicResource DefaultTextStyleKey}">
-                                <Run Text="戦闘種別:"/>
+                                <Run Text="Battle Type:"/>
                                 <Run Text="{Binding BattleName, Mode=OneWay}"
                                      FontSize="12"
                                      Style="{DynamicResource EmphaticTextElementStyleKey}"/>
                             </TextBlock>
                             <TextBlock Style="{DynamicResource DefaultTextStyleKey}">
-                                <Run Text="交戦形態:"/>
+                                <Run Text="Formation:"/>
                                 <Run Text="{Binding BattleSituation, Mode=OneWay}"
                                      FontSize="12"
                                      Style="{DynamicResource EmphaticTextElementStyleKey}"/>
                             </TextBlock>
                             <TextBlock Style="{DynamicResource DefaultTextStyleKey}">
-                                <Run Text="制空結果:"/>
+                                <Run Text="Air Results:"/>
                                 <Run Text="{Binding FriendAirSupremacy, Mode=OneWay}"
                                      FontSize="12"
                                      Style="{DynamicResource EmphaticTextElementStyleKey}"/>
@@ -82,13 +82,13 @@
 
                         <StackPanel Grid.Column="2">
                             <TextBlock Style="{DynamicResource DefaultTextStyleKey}">
-                                <Run Text="更新日時:"/>
+                                <Run Text="Date Modified:"/>
                                 <Run Text="{Binding UpdatedTime, Mode=OneWay}"
                                      FontSize="12"
                                      Style="{DynamicResource EmphaticTextElementStyleKey}"/>
                             </TextBlock>
                             <TextBlock Style="{DynamicResource DefaultTextStyleKey}">
-                                <Run Text="ドロップ:"/>
+                                <Run Text="Drop:"/>
                                 <Run Text="{Binding DropShipName, Mode=OneWay}"
                                      FontSize="12"
                                      Style="{DynamicResource EmphaticTextElementStyleKey}"/>
@@ -96,7 +96,7 @@
                         </StackPanel>
 
                         <Button Grid.Column="3"
-                                Content="既知の敵一覧"
+                                Content="Known Enemy List"
                                 VerticalAlignment="Stretch"
                                 HorizontalAlignment="Right"
                                 Margin="0,3,4,0">
@@ -118,7 +118,7 @@
             <StackPanel Orientation="Horizontal"
                         Grid.Row="1">
                 <views:Fleet Margin="0,6,0,0"
-                             DataContext="{Binding FirstFleet}"/>
+                             DataContext="{Binding FirstFleet}" Loaded="Fleet_Loaded"/>
 
                 <views:Fleet Margin="0,6,0,0"
                              DataContext="{Binding SecondFleet}"/>
@@ -130,10 +130,10 @@
             <StackPanel Grid.Row="2"
                         Orientation="Horizontal"
                         HorizontalAlignment="Right">
-                <CheckBox Content="戦闘終了通知"
+                <CheckBox Content="Notify end of combat"
                           IsChecked="{Binding IsNotifierEnabled}"
                           Margin="0,0,10,0"/>
-                <CheckBox Content="非アクティブ時のみ通知"
+                <CheckBox Content="Notify only when inactive"
                           IsChecked="{Binding IsNotifyOnlyWhenInactive}"
                           Margin="0,0,10,0"/>
             </StackPanel>

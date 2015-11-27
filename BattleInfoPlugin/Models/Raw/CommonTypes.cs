@@ -75,7 +75,7 @@
         public int[] api_undressing_flag { get; set; }
         public int[] api_stage_flag { get; set; }
         public int[][] api_plane_from { get; set; }
-        //各ステージで使われるプロパティは通常航空戦より少ない
+        //各ステージで使われるプロパティはNormal航空戦より少ない
         public Api_Stage1 api_stage1 { get; set; }
         public Api_Stage2 api_stage2 { get; set; }
         public Api_Stage3 api_stage3 { get; set; }

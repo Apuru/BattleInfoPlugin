@@ -8,15 +8,15 @@ namespace BattleInfoPlugin.Models
 {
     public enum AttackType
     {
-        通常, //1.0
-        連撃, //1.2*2
-        カットイン主主,    //1.5
-        カットイン主徹,    //1.3
-        カットイン主電,    //1.2
-        カットイン主副,    //1.1
-        カットイン雷,     //1.5*2
-        カットイン主主主,   //2.0
-        カットイン主主副,   //1.75
-        カットイン主雷,    //1.3*2
+        Normal, //1.0
+        DoubleAttack, //1.2*2
+        Cut_inMainMain,    //1.5
+        Cut_inMainTorp,    //1.3
+        Cut_inMainRadar,    //1.2
+        Cut_inMainAux,    //1.1
+        Cut_inTorp,     //1.5*2
+        Cut_inMainMainMain,   //2.0
+        Cut_inMainMainAux,   //1.75
+        Cut_inMainMainTorp,    //1.3*2
     }
 }

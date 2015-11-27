@@ -3,9 +3,9 @@
     public enum BattleSituation
     {
         なし = 0,
-        同航戦 = 1,
-        反航戦 = 2,
-        T字有利 = 3,
-        T字不利 = 4,
+        Parallel_Engagement = 1, // Parallel_Engagement Parallel_Engagement
+        Head_on_Engagement = 2, // Head_on_Engagement Head_on_Engagement
+        T_Advantage = 3, // T_Advantage T_Advantage
+        T_Disadvantage = 4, // T_Disadvantage T_Disadvantage
     }
 }

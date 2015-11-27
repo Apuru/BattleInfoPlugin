@@ -6,14 +6,14 @@
                           xmlns:models="clr-namespace:BattleInfoPlugin.Models"
                           xmlns:viewModels="clr-namespace:BattleInfoPlugin.ViewModels"
                           UpdatedTime="2015/03/08 15:15:15"
-                          BattleSituation="T字有利"
-                          FriendAirSupremacy="制空権確保"
+                          BattleSituation="T_Advantage"
+                          FriendAirSupremacy="Air_Supremacy"
                           BattleName="連合艦隊 - 水上部隊 - 昼戦"
                           DropShipName="ほっぽ">
 
     <viewModels:ToolViewModel.AirCombatResults>
-        <models:AirCombatResult Name="1回目/空対空"/>
-        <models:AirCombatResult Name="1回目/空対艦"
+        <models:AirCombatResult Name="1st/Air-to-Air"/>
+        <models:AirCombatResult Name="1st/Air-to-Ship"
                                 IsHappen="True"
                                 FriendCount="400"
                                 FriendLostCount="100"
@@ -21,7 +21,7 @@
                                 EnemyCount="900"
                                 EnemyLostCount="200"
                                 EnemyRemainingCount="700"/>
-        <models:AirCombatResult Name="空対空"
+        <models:AirCombatResult Name="Air-to-Air"
                                 IsHappen="True"
                                 FriendCount="400"
                                 FriendLostCount="100"
@@ -29,14 +29,14 @@
                                 EnemyCount="900"
                                 EnemyLostCount="200"
                                 EnemyRemainingCount="700"/>
-        <models:AirCombatResult Name="空対艦"/>
+        <models:AirCombatResult Name="Air-to-Ship"/>
     </viewModels:ToolViewModel.AirCombatResults>
 
     <viewModels:ToolViewModel.Enemies>
-        <viewModels:FleetViewModel Name="敵艦隊" FleetFormation="輪形陣" IsVisible="True">
+        <viewModels:FleetViewModel Name="Enemy Fleet" FleetFormation="輪形陣" IsVisible="True">
             <viewModels:FleetViewModel.AirCombatResults>
-                <viewModels:AirCombatResultViewModel Name="1回目/空対空"/>
-                <viewModels:AirCombatResultViewModel Name="1回目/空対艦"
+                <viewModels:AirCombatResultViewModel Name="1st/Air-to-Air"/>
+                <viewModels:AirCombatResultViewModel Name="1st/Air-to-Ship"
                                 IsHappen="True"
                                 Count="400"
                                 LostCount="100"

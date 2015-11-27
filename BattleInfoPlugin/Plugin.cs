@@ -12,10 +12,11 @@ namespace BattleInfoPlugin
     [Export(typeof(ITool))]
     [Export(typeof(IRequestNotify))]
     [ExportMetadata("Guid", "55F1599E-5FAD-4696-A972-BF8C4B3C1B76")]
-    [ExportMetadata("Title", "BattleInfo")]
-    [ExportMetadata("Description", "戦闘情報を表示します。")]
+    [ExportMetadata("Title", "Battle Info")]
+    [ExportMetadata("Description", "Displays combat information。")]
     [ExportMetadata("Version", "1.4.0")]
     [ExportMetadata("Author", "@veigr")]
+    [ExportMetadata("Translator", "@Apuru")]
     public class Plugin : IPlugin, ITool, IRequestNotify
     {
         private readonly ToolViewModel vm;

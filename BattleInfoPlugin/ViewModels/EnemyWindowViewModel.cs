@@ -161,12 +161,12 @@ namespace BattleInfoPlugin.ViewModels
         {
             if (result)
             {
-                this.Messenger.Raise(new InformationMessage(message, "マージ成功", MessageBoxImage.Information, "MergeResult"));
+                this.Messenger.Raise(new InformationMessage(message, "Merge Success", MessageBoxImage.Information, "MergeResult"));
                 this.EnemyMaps = this.CreateEnemyMaps();
             }
             else
             {
-                this.Messenger.Raise(new InformationMessage(message, "マージ失敗", MessageBoxImage.Warning, "MergeResult"));
+                this.Messenger.Raise(new InformationMessage(message, "Merge failed", MessageBoxImage.Warning, "MergeResult"));
             }
         }
     }

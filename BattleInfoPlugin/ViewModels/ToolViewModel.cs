@@ -28,7 +28,7 @@ namespace BattleInfoPlugin.ViewModels
                 : "";
 
         public string FriendAirSupremacy
-            => this.BattleData != null && this.BattleData.FriendAirSupremacy != AirSupremacy.航空戦なし
+            => this.BattleData != null && this.BattleData.FriendAirSupremacy != AirSupremacy.No_AirBattle
                 ? this.BattleData.FriendAirSupremacy.ToString()
                 : "";
 
@@ -130,9 +130,9 @@ namespace BattleInfoPlugin.ViewModels
         public ToolViewModel(Plugin plugin)
         {
             this.notifier = new BattleEndNotifier(plugin);
-            this._FirstFleet = new FleetViewModel("自艦隊");
-            this._SecondFleet = new FleetViewModel("護衛艦隊");
-            this._Enemies = new FleetViewModel("敵艦隊");
+            this._FirstFleet = new FleetViewModel("First Fleet");
+            this._SecondFleet = new FleetViewModel("Escort Fleet");
+            this._Enemies = new FleetViewModel("Enemy Fleet");
 
             this.CompositeDisposable.Add(new PropertyChangedEventListener(this.BattleData)
             {

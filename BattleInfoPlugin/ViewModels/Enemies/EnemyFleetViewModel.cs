@@ -53,8 +53,8 @@ namespace BattleInfoPlugin.ViewModels.Enemies
         {
             System.Diagnostics.Debug.WriteLine($"DeleteEnemy:{this.Key}");
             if (MessageBoxResult.OK != MessageBox.Show(
-                $"{this.Name}(key:{this.Key})のデータを削除してよろしいですか？",
-                "確認",
+                $"{this.Name}(key:{this.Key})Are you sure you want to delete？",
+                "Confirmation",
                 MessageBoxButton.OKCancel,
                 MessageBoxImage.Question))
                 return;

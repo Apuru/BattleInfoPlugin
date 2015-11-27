@@ -11,5 +11,10 @@ namespace BattleInfoPlugin.Views
         {
             InitializeComponent();
         }
+
+        private void Fleet_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+
+        }
     }
 }
