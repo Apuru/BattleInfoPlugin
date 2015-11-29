@@ -5,7 +5,7 @@
                            xmlns:models="clr-namespace:BattleInfoPlugin.Models"
                            xmlns:viewModels="clr-namespace:BattleInfoPlugin.ViewModels"
                            Name="敵艦隊"
-                           FleetFormation="戦闘陣形"
+                           FleetFormation="CF4_Battle"
                            IsVisible="True">
 
     <viewModels:FleetViewModel.AirCombatResults>

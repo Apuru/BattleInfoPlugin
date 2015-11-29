@@ -33,7 +33,7 @@
     </viewModels:ToolViewModel.AirCombatResults>
 
     <viewModels:ToolViewModel.Enemies>
-        <viewModels:FleetViewModel Name="Enemy Fleet" FleetFormation="輪形陣" IsVisible="True">
+        <viewModels:FleetViewModel Name="Enemy Fleet" FleetFormation="Diamond" IsVisible="True">
             <viewModels:FleetViewModel.AirCombatResults>
                 <viewModels:AirCombatResultViewModel Name="1st/Air-to-Air"/>
                 <viewModels:AirCombatResultViewModel Name="1st/Air-to-Ship"
@@ -73,7 +73,7 @@
     </viewModels:ToolViewModel.Enemies>
 
     <viewModels:ToolViewModel.FirstFleet>
-        <viewModels:FleetViewModel Name="自艦隊" FleetFormation="戦闘陣形" IsVisible="True">
+        <viewModels:FleetViewModel Name="自艦隊" FleetFormation="CF4_Battle" IsVisible="True">
             <viewModels:FleetViewModel.AirCombatResults>
                 <viewModels:AirCombatResultViewModel Name="1回目/空対空"/>
                 <viewModels:AirCombatResultViewModel Name="1回目/空対艦"

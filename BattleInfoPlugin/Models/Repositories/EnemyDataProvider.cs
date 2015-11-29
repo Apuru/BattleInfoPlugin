@@ -115,7 +115,7 @@ namespace BattleInfoPlugin.Models.Repositories
         {
             return this.EnemyData.EnemyFormation.ContainsKey(enemyId)
                 ? this.EnemyData.EnemyFormation[enemyId]
-                : Formation.不明;
+                : Formation.Unknown;
         }
 
         private IEnumerable<ShipData> GetEnemiesFromId(string enemyId)
